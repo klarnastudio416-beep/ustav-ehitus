@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ustav Ehitus OÜ - Plaatimistööd 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Ustav Ehitus OÜ</h1>
+        <p>Professionaalsed plaatimistööd Eestis. Kvaliteet ilma kompromissideta.</p>
+    </header>
+
+    <div class="container">
+        
+        <h2 class="section-title">Meie teenused</h2>
+        
+        <div class="grid">
+            <div class="card" id="card-1">
+                <h3>Vannitubade plaatimine</h3>
+                <p>Täielik ettevalmistus, hüdroisolatsiooni paigaldus ja plaatide paigaldamine vastavalt standarditele.</p>
+            </div>
+            
+            <div class="card" id="card-2">
+                <h3>Suuremõõtmeliste plaatide paigaldus</h3>
+                <p>Töö nõudliku ja eksklusiivse suuremõõtmelise keraamikaga (kuni 120x240 cm and rohkem).</p>
+            </div>
+            
+            <div class="card" id="card-3">
+                <h3>Köökide ja põrandate plaatimine</h3>
+                <p>Vastupidavad ja stiilsed lahendused köögi tagaseintele, elutubadele ja sissepääsudele.</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">Tehtud tööd</h2>
+        
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide active">
+                    <img src="images/images1.png" alt="Keraamiliste plaatide paigaldus duširuumis">
+                    <div class="slide-caption">Keraamiliste plaatide paigaldus duširuumis</div>
+                </div>
+                <div class="slide">
+                    <img src="images/images2.png" alt="Disainplaatide paigaldus koos trapi süvistamisega">
+                    <div class="slide-caption">Disainplaatide paigaldus koos trapi süvistamisega</div>
+                </div>
+                <div class="slide">
+                    <img src="images/images3.png" alt="Vannitoa plaatimine">
+                    <div class="slide-caption">Vannitoa seinte eksklusiivne viimistlus</div>
+                </div>
+                <div class="slide">
+                    <img src="images/images.png" alt="Suuremõõtmeliste plaatide paigaldus">
+                    <div class="slide-caption">Suuremõõtmelise keraamika paigaldus saalis</div>
+                </div>
+                <div class="slide">
+                    <img src="images/images4.png" alt="Köögitasapinna tagaseina plaatimine">
+                    <div class="slide-caption">Köögitasapinna tagaseina plaatimine</div>
+                </div>
+            </div>
+            
+            <button class="slider-btn prev-btn" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="slider-btn next-btn" onclick="changeSlide(1)">&#10095;</button>
+            
+            <div class="slider-dots">
+                <span class="dot active" onclick="setCurrentSlide(0)"></span>
+                <span class="dot" onclick="setCurrentSlide(1)"></span>
+                <span class="dot" onclick="setCurrentSlide(2)"></span>
+                <span class="dot" onclick="setCurrentSlide(3)"></span>
+                <span class="dot" onclick="setCurrentSlide(4)"></span>
+            </div>
+        </div>
+
+        <div class="calculator">
+            <h2>Esialgne hinnakalkulaator</h2>
+            
+            <div class="form-group">
+                <label>Plaatimise tüüp:</label>
+                <select id="tile-type" onchange="calculateTotal()">
+                    <option value="30">Standardplaat (seinad/põrand) - al. 30€/m²</option>
+                    <option value="45">Suur formaat / Mosaiik - al. 45€/m²</option>
+                    <option value="15">Ainult hüdroisolatsioon ja ettevalmistus - al. 15€/m²</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Pindala (m²):</label>
+                <input type="number" id="tile-area" value="10" min="1" oninput="calculateTotal()">
+            </div>
+
+            <div class="result-box">
+                <span>Orienteeruv tööde maksumus:</span>
+                <div class="result-price" id="total-price">300.00 €</div>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <h2>Kas vajate professionaalset plaatijat?</h2>
+            <p>Võtke meiega ühendust WhatsAppis või telefoni teel, et leppida kokku objekti tasuta ülevaatus.</p>
+            <button class="cta-btn" id="whatsapp-btn">WhatsApp: +372 XXXX XXXX</button>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Ustav Ehitus OÜ. Reg. kood: XXXXXXXX. Kõik õigused kaitstud.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
